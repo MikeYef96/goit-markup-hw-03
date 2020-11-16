@@ -449,6 +449,8 @@ button {
     justify-content: center;
 
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .projects-list .item {
@@ -459,21 +461,15 @@ button {
     border-radius: 0px 0px 4px 4px;
     background: #fff;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .projects-list .item:hover {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
-/*.projects-list .item+.item {
-    margin-left: 30px;
+.projects-list .item:nth-child(3n) {
+    margin-right: 0;
 }
-
-LETS MAKE LESS CODE & WRITE IT TO LIST
-
-.projects-list .item:first-child {
-    margin-left: 30px;
-}*/
 
 /*PORTFOLIO.HTML END*/

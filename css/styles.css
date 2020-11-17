@@ -6,6 +6,17 @@
     --bg-portfolio-filter: #F5F4FA;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
 ul {
     padding: 0;
     margin: 0;
@@ -19,10 +30,16 @@ ul {
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    height: 80px;
     max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
+    height: 80px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+
 }
 
 .title-webstudio {
@@ -80,8 +97,7 @@ ul {
 }
 
 .header-link:hover,
-.header-link:focus,
-.header-link:active {
+.header-link:focus {
     color: var(--background-button);
 }
 
@@ -111,8 +127,7 @@ ul {
 }
 
 .emeil-mobile:hover,
-.emeil-mobile:focus,
-.emeil-mobile:active {
+.emeil-mobile:focus {
     color: var(--background-button);
 }
 
@@ -156,8 +171,7 @@ body {
 }
 
 .hero-button:hover,
-.hero-:focus,
-.hero-button:active {
+.hero-:focus {
     background: #0569bb;
 }
 
@@ -166,20 +180,26 @@ body {
 /*BENEFITS START*/
 .benefits-section {
     letter-spacing: 0.03em;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
-.container-benefits {
+/*FLEX FOR MAIN*/
+.container {
     display: flex;
     justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 15px;
+    width: 1200px;
 }
+
+/*FLEX FOR MAIN*/
 
 .benefits-section_list {
     display: flex;
-    padding-top: 94px;
-    padding-bottom: 94px;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
+    justify-content: center;
 }
 
 .benefits-section_list .item+.item {
@@ -208,18 +228,15 @@ body {
 /*BENEFITS END*/
 
 /*PORTFOLIO START*/
-.container-portfolio {
-    display: flex;
-    justify-content: center;
+
+.portfolio {
+    letter-spacing: 0.03em;
+    padding-bottom: 94px;
 }
 
 .portfolio-list {
     display: flex;
     justify-content: center;
-
-    max-width: 1200px;
-    padding-left: 15px;
-    padding-left: 15px;
 }
 
 .portfolio-list .item+.item {
@@ -231,13 +248,7 @@ body {
     opacity: .65;
 }
 
-.portfolio {
-    padding-bottom: 94px;
-    letter-spacing: 0.03em;
-}
-
 .portfolio-title {
-    margin-bottom: 50px;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -255,21 +266,13 @@ body {
 .team {
     letter-spacing: 0.03em;
     background-color: var(--bg-portfolio-filter);
-}
-
-.container-team {
-    display: flex;
-    justify-content: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .team-list {
     display: flex;
     justify-content: center;
-
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 94px;
 }
 
 .team-list .item {
@@ -290,8 +293,6 @@ body {
 }
 
 .team-title {
-    padding-top: 94px;
-    padding-bottom: 50px;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -346,16 +347,24 @@ body {
     color: var(--text-color);
 }
 
-.container-footer_title {
+.container-footer {
+    display: flex;
+    flex-direction: column;
+
     padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.container-footer_title {
+    display: flex;
+    justify-content: flex-start;
     margin-bottom: 20px;
-    margin-left: 215px;
 }
 
 .container-address {
-    width: 231px;
-    padding-bottom: 60px;
-    margin-left: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .title-studio_footer {
@@ -366,15 +375,21 @@ body {
 
 /*PORTFOLIO.HTML START*/
 
+.container-portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 .header-portfolio {
     border-bottom: 1px solid #ECECEC;
 }
 
 .filters-list {
     display: flex;
-    margin-top: 94px;
-    margin-bottom: 34px;
     justify-content: center;
+    margin-bottom: 34px;
 }
 
 .filters-list .item+.item {
@@ -438,19 +453,10 @@ button {
     padding: 20px 24px;
 }
 
-.container-projects {
-    display: flex;
-    justify-content: center;
-}
-
 .projects-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .projects-list .item {

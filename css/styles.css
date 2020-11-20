@@ -4,6 +4,7 @@
     --text-color: #757575;
     --background-hero-footer: #2F303A;
     --bg-portfolio-filter: #F5F4FA;
+    --text-social-items: #AFB1B8;
 }
 
 h1,
@@ -23,7 +24,9 @@ ul {
     list-style: none;
 }
 
-/*HEADER START*/
+
+
+/*HEADER START======================================================*/
 
 .header-container {
     display: flex;
@@ -101,9 +104,9 @@ ul {
     color: var(--background-button);
 }
 
-/*NAVIGATION END*/
+/*NAVIGATION END==============================================*/
 
-/*CONTACTS START*/
+/*CONTACTS START=============================================*/
 .contacts-list {
     display: flex;
     margin-left: auto;
@@ -113,6 +116,32 @@ ul {
 .contacts-list .item+.item {
     margin-left: 50px;
 }
+
+.contacts-link {
+    padding: 0;
+    border: none;
+    fill: var(--text-color);
+}
+
+.contacts-link:hover {
+    fill: var(--background-button);
+    cursor: pointer;
+}
+
+.button:hover svg {
+    fill: var(--background-button);
+    cursor: pointer;
+}
+
+
+.email-icon {
+    margin-right: 10px;
+}
+
+.mobile-icon {
+    margin-right: 10px;
+}
+
 
 .emeil-mobile {
     font-family: Roboto;
@@ -131,24 +160,34 @@ ul {
     color: var(--background-button);
 }
 
-/*CONTACTS END*/
+/*CONTACTS END==================================================*/
 
 button {
     font-family: inherit;
 }
 
-/*HERO BLOCK START*/
+/*HERO BLOCK START===============================================*/
 
 body {
     font-family: Roboto, sans-serif;
 }
 
 .hero {
+    max-width: 1600px;
+    height: 600px;
     padding: 200px 0;
     text-align: center;
     text-transform: uppercase;
-    background: var(--background-hero-footer);
     letter-spacing: 0.06em;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../img/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--background-hero-footer);
 }
 
 .hero-title {
@@ -168,6 +207,7 @@ body {
     color: #FFFFFF;
     background: var(--background-button);
     border: 0;
+    cursor: pointer;
 }
 
 .hero-button:hover,
@@ -175,16 +215,16 @@ body {
     background: #0569bb;
 }
 
-/*HERO BLOCK END*/
+/*HERO BLOCK END==================================================*/
 
-/*BENEFITS START*/
+/*BENEFITS START===============================================*/
 .benefits-section {
     letter-spacing: 0.03em;
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-/*FLEX FOR MAIN*/
+/*FLEX FOR MAIN=============================================*/
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -193,15 +233,32 @@ body {
     width: 1200px;
 }
 
-/*FLEX FOR MAIN*/
+/*FLEX FOR MAIN=============================================*/
 
 .benefits-section_list {
     display: flex;
     justify-content: center;
 }
 
-.benefits-section_list .item+.item {
+.benefits-section_list .list-item+.list-item {
     margin-left: 30px;
+}
+
+.benefits-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: var(--bg-portfolio-filter);
+}
+
+.benefits-bg_icons {
+    width: 70px;
+    height: 70px;
 }
 
 .benefits-section_title {
@@ -223,9 +280,9 @@ body {
     color: var(--text-color);
 }
 
-/*BENEFITS END*/
+/*BENEFITS END============================================*/
 
-/*PORTFOLIO START*/
+/*PORTFOLIO START==========================================*/
 
 .portfolio {
     letter-spacing: 0.03em;
@@ -241,10 +298,10 @@ body {
     margin-left: 30px
 }
 
-.portfolio-list .item:hover {
+/* .portfolio-list .item:hover {
     transition: 0.1s;
     opacity: .65;
-}
+} */
 
 .portfolio-title {
     font-style: normal;
@@ -258,9 +315,9 @@ body {
 
 
 
-/*PORTFOLIO END*/
+/*PORTFOLIO END=================================*/
 
-/*TEAM START*/
+/*TEAM START====================================*/
 
 .team {
     letter-spacing: 0.03em;
@@ -272,6 +329,39 @@ body {
 .team-list {
     display: flex;
     justify-content: center;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.social-list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.social-list__item+.social-list__item {
+    margin-left: 10px;
+}
+
+.social-list__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-social-items);
+}
+
+.social-list__link:hover {
+    background-color: var(--background-button);
+}
+
+.social-list__link:hover svg {
+    fill: #FFFFFF;
 }
 
 .team-list .item {
@@ -321,9 +411,61 @@ body {
     padding-bottom: 15px;
 }
 
-/*TEAM END*/
+/*=======================TEAM END============================*/
 
-/*FOOTER START*/
+/*========================CLIENTS START======================*/
+.clients {
+    letter-spacing: 0.03em;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients-list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 90px;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.clients-list__icon {
+    fill: var(--text-social-items);
+}
+
+.clients-list__link:hover {
+    border-color: var(--background-button);
+}
+
+.clients-list__link:hover svg {
+    fill: var(--background-button);
+}
+
+.clients-list__item+.clients-list__item {
+    margin-left: 30px;
+}
+
+/*CLIENTS END========================*/
+
+/*FOOTER START===================================================*/
 
 .footer {
     background: var(--background-hero-footer);
@@ -343,6 +485,7 @@ body {
 
 .address-link {
     margin-bottom: 9px;
+    min-width: 231px;
 }
 
 .container-address .contacts-footer+.contacts-footer {
@@ -355,17 +498,28 @@ body {
     font-size: 14px;
     line-height: 1.71;
     color: var(--text-color);
+    width: fit-content;
+}
+
+.contacts-container {
+    display: flex;
+    align-items: baseline;
 }
 
 .container-footer {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 .container-footer_title {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 20px;
+}
+
+.title-webstudio {
+    max-width: 145px;
 }
 
 .container-address {
@@ -378,9 +532,58 @@ body {
     color: #FFFFFF;
 }
 
-/*FOOTER END*/
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-/*PORTFOLIO.HTML START*/
+    margin-left: 70px;
+}
+
+.links-container__list {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.links-container__item+.links-container__item {
+    margin-left: 10px;
+}
+
+.footer-list__icon {
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+}
+
+.footer-list__link:hover {
+    background-color: var(--background-button);
+}
+
+.social-links__title {
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/*FOOTER END=======================================================*/
+
+/*PORTFOLIO.HTML START======================*/
 
 .filters_projects {
     padding-top: 94px;
@@ -431,6 +634,7 @@ button {
     text-align: center;
     color: var(--title-color);
     letter-spacing: 0.03em;
+    cursor: pointer;
 }
 
 .filters-list_item:hover,
@@ -441,7 +645,7 @@ button {
     border-radius: 4px;
 }
 
-/*PROJECTS START*/
+/*PROJECTS START========================================*/
 
 .projects-list_title {
     font-style: normal;
@@ -489,5 +693,11 @@ button {
 .projects-list .item:nth-child(3n) {
     margin-right: 0;
 }
+
+/* .projects-list .item:nth-last-child(n+7) {
+    margin-top: 0;
+} */
+
+
 
 /*PORTFOLIO.HTML END*/
